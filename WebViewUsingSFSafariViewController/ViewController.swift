@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -13,7 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func buttonTapped() {
+     
+        let vc = SFSafariViewController(url: URL(string: "https://www.apple.com")!)
+        
+        present(vc, animated: true)
+        
+    }
 }
 
